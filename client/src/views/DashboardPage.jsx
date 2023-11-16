@@ -36,7 +36,6 @@ const DashboardPage = () => {
                                 <button>
                                     <a href={`/coin/${coin.id}`}>{coin.name}</a>
                                 </button>
-
                             </div>
                         </div>
                     );
