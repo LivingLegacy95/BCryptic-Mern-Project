@@ -5,8 +5,8 @@ import CoinDetail from '../components/CoinDetail'
 const DetailPage = () => {
     return (
         <div className="wrapper-container mt-10">
-            <HistoryChart />
-            <CoinDetail />
+            <HistoryChart/>
+            <CoinDetail/>
         </div>
     )
 }
