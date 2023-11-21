@@ -13,7 +13,7 @@ function App() {
         <p><Link to = 'dashboard'>To the Moon</Link></p>
         <Routes>
           <Route path="/dashboard" element={<DashboardPage/>}/>
-          <Route path="/api/coin/:id" element={<DetailPage/>}/>
+          <Route path="/coin/:id" element={<DetailPage/>}/>
         </Routes>
       </div>
   );
