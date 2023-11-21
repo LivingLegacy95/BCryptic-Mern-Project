@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .container{
   margin: 0;
   padding: 0;
@@ -28,7 +32,7 @@
 }
 
 #con{
-  margin-top: 200px;
+  /* margin-top: 200px; */
 }
 
 .card-container {

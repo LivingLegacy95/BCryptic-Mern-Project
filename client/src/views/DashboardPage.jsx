@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import axios from "axios"
 import '../App.css'
+import Trending from '../components/Trending'
 
 const DashboardPage = () => {
     const [cryptoList, setCryptoList] = useState([])
@@ -16,6 +17,9 @@ const DashboardPage = () => {
     }, [])
     return (
         <div className="container" id="con">
+            <div>
+                <Trending />
+            </div>
             <div className="data">
                 {cryptoList.map((coin, idx) => {
                     return (
