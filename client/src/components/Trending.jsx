@@ -6,7 +6,7 @@ import CoinTrending from './CoinTrending'
 
 const Trending = () => {
     const { response } = UseAxios('/search/trending')
-    console.log(response)
+    console.log(response.data)
     return (
         <div className='mt-8'>
             <h1 className='text-2xl mb-2'>Trending</h1>
