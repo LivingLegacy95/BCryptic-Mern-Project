@@ -1,9 +1,9 @@
 import React from 'react'
-import UseAxios from '../Hooks/UseAxios'
+import useAxios from '../hooks/useAxios';
 
 const CoinDetail = () => {
-    const {response} = UseAxios(`coins/Bitcoin?localization=false&tickers=false&market_data=false&community_data=false&developer_data=true&sparkline=false`);
-    console.log(response.data)
+    const {response} = useAxios(`coins/Bitcoin?localization=false&tickers=false&market_data=false&community_data=false&developer_data=true&sparkline=false`);
+    console.log(response)
     
     return (
         <div>CoinDetail</div>

@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 
-const UseAxios = (param) => {
+const useAxios = (param) => {
+
     const [response, setResponse] = useState(null);
     const [loading, setLoading] = useState(false);
     const[error, setError] = useState('');
@@ -12,17 +13,20 @@ const UseAxios = (param) => {
     
     const fetchData = async (param) => {
         try{
-                setLoading(true);
+            setLoading(true);
             const result = await axios(param)
             setResponse(result.data)
+            console.log("Hello World")
+            
 
         }catch(err){
+            setResponse("err")
             setError(err);
         } finally {
             setLoading(false);
         }
     }
-    useEffect((param)=>{
+    useEffect(()=>{
         fetchData(param);
 
     },[])
@@ -31,4 +35,4 @@ const UseAxios = (param) => {
     )
 }
 
-export default UseAxios
+export default useAxios
