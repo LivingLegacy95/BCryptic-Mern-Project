@@ -8,19 +8,23 @@ const useAxios = (param) => {
     const [loading, setLoading] = useState(false);
     const[error, setError] = useState('');
     
-    axios.default.baseURL = 'https://api.coingecko.com/api/v3'
+    //base URL of axios API call to destructure useAxios method
+    axios.defaults.baseURL = 'https://api.coingecko.com/api/v3'
     
-    
+    //Function do destructure Axios
     const fetchData = async (param) => {
         try{
             setLoading(true);
+            //assigning variable telling application to wait for API call 
             const result = await axios(param)
+            //Setting response from API into state
             setResponse(result.data)
-            console.log("Hello World")
+            //responses from API
+            console.log(result)
+            console.log(response)
             
 
         }catch(err){
-            setResponse("err")
             setError(err);
         } finally {
             setLoading(false);
@@ -30,9 +34,9 @@ const useAxios = (param) => {
         fetchData(param);
 
     },[])
-    return (
-        response, loading, error
-    )
+    return{
+        response, loading , error
+    }   
 }
 
 export default useAxios
