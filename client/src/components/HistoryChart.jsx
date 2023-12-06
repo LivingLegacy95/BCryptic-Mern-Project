@@ -73,7 +73,8 @@ const HistoryChart = () => {
     console.log(coinChartData)
 
     return (
-        <div >
+        <div>
+            <Line options={options} />
         </div>
     )
 }
