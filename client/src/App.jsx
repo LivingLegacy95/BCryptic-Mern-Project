@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import DashboardPage from './views/DashboardPage';
 import DetailPage from './views/DetailPage'
 import Trending from './components/Trending';
+import React from 'react';
 
 
 function App() {
